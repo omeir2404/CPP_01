@@ -1,8 +1,6 @@
 NAME	= Unnecessary_violence
 
-CC		= c++ -Wall -Werror -Wextra 
-
-CFLAGS	= -Wall -Werror -Wextra 
+CC		= c++ -Wall -Werror -Wextra -std=c++98
 
 SRC	= main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 
@@ -16,7 +14,7 @@ run: re
 	@valgrind --log-file="./logfile" --leak-check=full --show-leak-kinds=all ./$(NAME)
 
 clean:		
-	rm -f $(NAME)
+	rm -f $(NAME) logfile
 	clear
 
 re:			clean $(NAME)

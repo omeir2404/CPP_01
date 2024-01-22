@@ -1,8 +1,10 @@
-NAME	= Sed_is_for_losers
+NAME	= ex05
 
-CC		= c++ -Wall -Werror -Wextra  -std=c++98
+CC		= c++ -Wall -Werror -Wextra -g -std=c++98
 
-SRC	= main.cpp 
+CFLAGS	= -Wall -Werror -Wextra 
+
+SRC	= main.cpp Harl.cpp Harl.hpp
 
 all:	$(NAME)
 
